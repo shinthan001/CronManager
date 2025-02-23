@@ -1,0 +1,50 @@
+{% include 'layout.html' %}
+
+<div class="container">
+    <div class="card text-center">
+        <!-- <div class="card-header">
+            Your Cronjobs!
+        </div> -->
+        <div class="card-body">
+            <h5 class="card-title">
+                List of Cron Jobs!
+            </h5>
+            <p class="card-text">
+                Status button represents on/off status of a particular cron.<br>
+                # indicates line number in cronjob file. (Newlines or non cron expressions are not counted.)<br>
+            </p>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Job Name</th>
+                        <!-- <th scope="col">Cron Expression</th> -->
+                        <th scope="col">Next Run</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for job in jobs %}
+                {% if job.next_run %}
+                <tr class="pointer">
+                    <td>{{job.id}}</td>
+                    <td>{{job.name}}</td>
+                    <td>{{job.next_run}}</td>
+                    <!-- <td>{{job.cron_job}}</td> -->
+                    <td>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" 
+                            id="customSwitch" {{ 'checked' if job.is_active else '' }}
+                            onclick="toggleSwitch('{{job.id}}','{{job.name}}', '{{ job.cron_job }}', this.checked)">
+                        </div>
+                    </td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            </table>
+            <a href="jobs-page" class="btn btn-primary" onclick="saveButton()">Save</a>
+        </div>
+    </div>
+</div>

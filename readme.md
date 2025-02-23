@@ -67,7 +67,7 @@ This is a simple web app to turn on/off cron job running in Linux server. This a
 - Since cronjobs are simply saved in flat file, multiple users editing at the same time might cause problem.
 
     <br>
-    <img src='./img/UI.png' width='70%'>
+    <img src='./img/UI.PNG' width='70%'>
 
 ## Kill Server
 - Server process id is stored in `server.pid` once server is launched. Simply kill it.

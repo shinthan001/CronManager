@@ -66,6 +66,9 @@ This is a simple web app to turn on/off cron job running in Linux server. This a
 
 - Since cronjobs are simply saved in flat file, multiple users editing at the same time might cause problem.
 
+    <br>
+    <img src='./img/UI.png' width='70%'>
+
 ## Kill Server
 - Server process id is stored in `server.pid` once server is launched. Simply kill it.
 
@@ -75,4 +78,4 @@ This is a simple web app to turn on/off cron job running in Linux server. This a
 ## Project Structure
 - This is simple architecture of this project. FastAPI server hosts endpoints on Linux server and user makes changes to cronfile via web app.
     <br>
-    <img src='./img/architecture.png' width='50%'>
+    <img src='./img/architecture.png' width='70%'>

@@ -66,6 +66,11 @@ This is a simple web app to turn on/off cron job running in Linux server. This a
 
 - Since cronjobs are simply saved in flat file, multiple users editing at the same time might cause problem.
 
+- Importantly, your cronjob must be saved in the following format to be rendered in webapp.
+  ```
+  */3 * * * * <your script or cmd> # <your script name to be appeared in web> 
+  ```
+
     <br>
     <img src='./img/UI.PNG' width='70%'>
 

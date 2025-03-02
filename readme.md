@@ -3,7 +3,7 @@ This is a simple web app to turn on/off cron job running in Linux server. This a
 
 ## Table of Contents
 - [Project Setup](#project-setup)
-- [Usage](#credential)
+- [Usage](#usage)
 - [Kill Server](#kill-server)
 - [Project Structure](#project-structure)
 
